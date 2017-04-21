@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--引入第三方框架UI-->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet/less" href="css/base.less">
+    <link rel="stylesheet/less" href="css/gsproduct.less">
+    <script type="text/javascript" src="lib/less/less.js"></script>
+    <title>慢慢买</title>
+</head>
+
+<body>
+    <!--头部-->
+    <header id="header">
+        <a href="index.html" class="break">&lt;
+        </a>
+        <h3>凑单品</h3>
+        <a href="#" class="app">
+            <img src="images/header_app.png" alt="">
+        </a>
+    </header>
+    <!--商品推荐-->
+    <section id="navo" class="clearfix">
+        <div class="xuan">
+        <ul class="clearfix">
+            <li><a href="javascript:;" id="jd">京东 <i></i> </a></li>
+            <li><a href="javascript:;" id="ar">华东 <i></i> </a></li>
+            <li><a href="javascript:;" id="pr">全部价格 <i></i> </a></li>
+        </ul>
+        </div>
+        <div class="jd"></div>
+        <div class="area"></div>
+    </section>
+    <section id="product">
+
+    </section>
+    <!--底部-->
+    <section id="footer">
+        <ul>
+            <li class="login">
+                <a href="#">登录</a>
+            </li>
+            <li class="register">
+                <a href="#">注册</a>
+            </li>
+            <li class="backTop">
+                <img src="images/top.jpg" height="15" width="15" alt="">
+                返回顶部
+            </li>
+        </ul>
+        <div class="bottomText">
+            <a href="#">手机APP下载</a>
+            <span>慢慢买手机版-掌上比价平台</span> <br>
+            <span>m.manmanmai.com</span>
+        </div>
+    </section>
+    <!--js文件 注意引入的依赖关系-->
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/template.js"></script>
+    <script src="js/gsproduct.js"></script>
+    <script type="text/html" id="template_title">
+        <ul>
+        {{each result as val i}}
+            <li shopId={{val.shopId}}>
+            <a href="javascript:;">{{val.shopName}} <i {{if i == 0}}class="show" {{/if}}>√</i></a>
+            </li>
+            {{/each}}
+        </ul>
+    </script>
+    <script type="text/html" id="template_area">
+        <ul>
+        {{each result as val i}}
+            <li areaId={{val.areaId}}>
+            <a href="javascript:;">{{val.areaName}} <i {{if i == 0}}class="show" {{/if}}>√</i></a>
+            </li>
+            {{/each}}
+        </ul>
+    </script>
+    <script type="text/html" id="template_pro">
+        <ul class="clearfix">
+        {{each result as val i}}
+            <li >
+            <a href="#">
+              <img src="{{val.productImg}}" alt="">
+              <p>{{val.productName}}</p>
+              <span>{{val.productPrice}}</span>
+            </a>
+            </li>
+            {{/each}}
+        </ul>
+    </script>
+</body>
+
+</html>

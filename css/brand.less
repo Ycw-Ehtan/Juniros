@@ -1,0 +1,109 @@
+body {
+    background-color: #f2f2f2;
+    .breadcrumb {
+        margin-bottom: 10px;
+    }
+    #hotBrand {
+        padding: 0 5px;
+        line-height: 40px;
+        margin-bottom: 10px;
+        div {
+            color: #98622B;
+            width: 100%;
+            background-color: #ebebeb;
+            border: 1px solid #DBDBDB;
+            padding: 0 15px;
+            font: 700 16px/40px "微软雅黑";
+        }
+    }
+    #brandRanking {
+        ul {
+            li {
+                margin-bottom: 10px;
+                border-bottom: 1px solid #F0F0F0;
+                a {
+                    display: flex;
+                    padding: 10px;
+                    justify-content: flex-start;
+                    position: relative;
+                    .RankindNum {
+                        width: 20px;
+                        height: 20px;
+                        text-align: center;
+                        background-color: #C9C9C9;
+                        color: #FDF7FD;
+                        display: inline-block;
+                    }
+                    .inf {
+                        margin-left: 10px;
+                        p {
+                            color: #424242;
+                            font-size: 18px;
+                        }
+                        span {
+                            color: #9C9C9C;
+                            font-size: 14px;
+                        }
+                    }
+                    .iconlt {
+                        position: absolute;
+                        top: 10px;
+                        right: 10px;
+                        font-size: 18px;
+                        float: right;
+                        align-items: flex-end;
+                    }
+                }
+            }
+            li:nth-child(1) a .RankindNum {
+                background-color: #F10E0E;
+            }
+            li:nth-child(2) a .RankindNum {
+                background-color: #FF9314;
+            }
+            li:nth-child(3) a .RankindNum {
+                background-color: #8ADF5B;
+            }
+        }
+    }
+    #brComList {
+        ul {
+            li {
+                display: flex;
+                border-bottom: 1px solid #ccc;
+                padding: 10px;
+                a {
+                    display: inherit;
+                    .pic {
+                        flex: 1.2;
+                        padding: 10px 0;
+                        display: inline-block;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    .cmdMsg {
+                        margin-left: 5px;
+                        flex: 3;
+                        display: inline-block;
+                        .cmdtitle {
+                            color: #333;
+                            font-size: 15px;
+                            line-height: 19px;
+                            min-height: 57px;
+                            font-weight: normal;
+                        }
+                        .comMoney {
+                            color: red;
+                            margin-top: 10px;
+                        }
+                        .pdTime {
+                            color: #EE7905;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

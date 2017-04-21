@@ -1,0 +1,125 @@
+//头部标题栏
+#header {
+    background-color: #FF841D;
+    text-align: center;
+    .break {
+        font-size: 24px;
+        color: #fff;
+        float: left;
+    }
+    h3 {
+        color: #fff;
+        font-size: 18px;
+        margin: 10px 0 0 0;
+    }
+    .app {
+        margin-top: -20px;
+    }
+}
+
+#navo {
+    position: relative;
+    
+    .sear {
+        float: right;
+        width: 46px;
+        position: relative;
+        text-align: center;
+        border-left: 1px solid #dadada;
+        height: 37px;
+    }
+    .xuan {
+        border-bottom: 1px solid #dadada;
+        ul {
+            width: 100%;
+            padding-right: 47px;
+            li {
+                float: left;
+                width: 33%;
+                a {
+                    display: block;
+                    font-size: 16px;
+                    text-align: center;
+                    line-height: 37px;
+                    color: #5a5a5a;
+                    overflow: hidden;
+                    i {
+                        display: inline-block;
+                        border: 5px solid transparent;
+                        border-top-color: #000;
+                        transform: translateY(3px);
+                    }
+                    .zhuan {
+                        transform: translateY(3px) rotate(180deg);
+                        transform-origin: top;
+                    }
+                }
+            }
+        }
+    }
+    .jd,
+    .area {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 38px;
+        width: 100%;
+        box-shadow: 0 3px 5px 0px #ccc;
+        ul {
+            background: #fff;
+            li {
+                border-bottom: 1px solid #f1f1f1;
+                a {
+                    display: block;
+                    line-height: 40px;
+                    padding: 0px 10px;
+                    color: #5a5a5a;
+                    i {
+                        float: right;
+                        display: none;
+                    }
+                    .show {
+                        color: red;
+                        font-weight: bold;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#product {
+    ul {
+        background: #f1f1f1;
+        padding: 10px 0px 0 10px;
+        li {
+            padding: 0 10px 10px 0;
+            width: 50%;
+            float: left;
+            a {
+                background: #fff;
+                display: block;
+                box-shadow: 0 0 4px #fff;
+                img {
+                    width: 100%;
+                }
+                p {
+                    color: #333333;
+                    padding: 0 6px;
+                    height: 14px;
+                    overflow: hidden;
+                    font-size: 12px;
+                    line-height: 14px;
+                    text-align: left;
+                    margin-top: 6px;
+                }
+                span {
+                    padding: 0 6px;
+                    color: #f8601d;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,108 @@
+//省钱控列表
+#recommen {
+    ul {
+        margin-bottom: 0;
+        li {
+            display: flex;
+            border-bottom: 1px solid #ccc;
+            padding: 10px;
+            a{
+                display: inherit;
+                .pic {
+                flex: 1;
+                width: 100px;
+                height: 100px;
+                padding: 10px 0;
+                display: inline-block;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .cmdMsg {
+                margin-left: 5px;
+                flex: 3;
+                display: inline-block;
+                .cmdtitle {
+                    color: #333;
+                    font-size: 15px;
+                    line-height: 19px;
+                    // text-align: center;
+                    min-height: 57px;
+                    font-weight: normal;
+                    .productName {
+                    }
+                    .money {
+                        color: #ff6c00;
+                    }
+                }
+                .cmdfooter {
+                    margin-top: 10px;
+                        font-size: 12px;
+                    .cmdData {
+                        color: #a1a1a1;
+                        float: left;
+                        .productFrom{
+                            float: left;
+                        }
+                        .productTime{
+                            float: left;
+                        }
+                    }
+                    .Comment {
+                        margin-right: 5px;
+                        float: right;
+                        img {
+                            float: right;
+                        }
+                        span {
+                            float: right;
+                            color: #a1a1a1;
+                            font-size: 12px;
+                            margin-left: 5px;
+                            margin-top: -3px;
+                        }
+                    }
+                }
+            }
+            }
+        }
+    }
+    .moreThan {
+        background: #F7F7F7;
+        padding: 10px 15px 20px;
+        button {
+            width: 100%;
+            height: 35px;
+            text-align: center;
+            border-radius: 5px;
+            background-color: #F4F4F4;
+            border: 1px solid #ddd;
+            margin: 0 auto;
+        }
+    }
+}
+
+// 分页
+#fenye {
+    text-align: center;
+    padding: 10px;
+    button {
+        width: 100px;
+        height: 30px;
+        text-align: center;
+        display: block;
+    }
+    .upPage {
+        float: left;
+    }
+    .downPage {
+        float: right;
+    }
+    #pageBox {
+        width: 80px;
+        height: 25px;
+        display: inline-block;
+        margin-top: 5px;
+    }
+}
