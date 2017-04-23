@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<link rel="stylesheet/less" href="css/base.less">
+<link rel="stylesheet/less" href="css/couponproduct.less">
+<script type="text/javascript" src="lib/less/less.js"></script>
+
+<body>
+    <!--头部-->
+    <header id="header">
+        <a href="http://localhost/MMB(慢慢买)/MobileShopProject/coupon.html?pageid=0" class="break">&lt;
+        </a>
+        <h3></h3>
+        <a href="#" class="app">
+            <img src="images/header_app.png" alt="">
+        </a>
+    </header>
+    <!-- 商品列表 -->
+    <section id="comList">
+    </section>
+    <!--底部-->
+    <section id="footer">
+        <ul>
+            <li class="login">
+                <a href="#">登录</a>
+            </li>
+            <li class="register">
+                <a href="#">注册</a>
+            </li>
+            <li class="backTop">
+                <img src="images/top.jpg" height="15" width="15" alt=""> 返回顶部
+            </li>
+        </ul>
+        <div class="bottomText">
+            <a href="#">手机APP下载</a>
+            <span>慢慢买手机版-掌上比价平台</span>
+            <br>
+            <span>m.manmanmai.com</span>
+        </div>
+    </section>
+</body>
+<script src="lib/template.js"></script>
+<!-- 商品列表模板 -->
+<script type="text/template" id="comListTpl">
+    <ul>
+        {{each result as value index}}
+        <li>
+            <a href="#">
+                <div class="imgBox">
+                    {{#value.couponProductImg}}
+                </div>
+                <div class="infoBox">
+                  <div class="pdTitle">
+                    {{value.couponProductName}}
+                  </div>
+                  <div class="pdPrice">
+                    {{value.couponProductPrice}}
+                  </div>
+                  <div class="pdTime">
+                    {{value.couponProductTime}}
+                  </div>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+    </ul>
+</script>
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="js/couponproduct.js"></script>
+
+</html>

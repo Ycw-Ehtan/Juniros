@@ -1,0 +1,189 @@
+/*reset css  重置默认的一些样式  浏览器子自带的  目的是保持各种终端显示一致*/
+
+
+/*所有的标签和伪类  before after*/
+
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    /*在移动端特殊的设置*/
+    /*清除点击高亮效果*/
+    -webkit-tap-highlight-color: transparent;
+    /*设置所有的盒子的宽度以边框开始计算*/
+    -webkit-box-sizing: border-box;
+    /*要兼容 webkit 浏览器内核厂商 这种情况一般是老的移动端浏览器*/
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 14px;
+    color: #333;
+    font-family: "MicroSoft YaHei";
+    /*是设备默认的字体*/
+}
+
+ul,ol,dl {
+    list-style: none !important;
+}
+
+a {
+    text-decoration: none;
+    color: #5a5a5a;
+}
+
+input,
+textarea {
+    border: none;
+    outline: none;
+    resize: none;
+    /*特殊的属性定义  清除浏览器给input自带的样式*/
+    -webkit-appearance: none;
+    /*组件默认的样式空*/
+}
+
+
+/*common css  也就是我们公用的css*/
+
+.f_l {
+    float: left;
+}
+
+.f_r {
+    float: right;
+}
+
+.clearfix::after,
+.clearfix::before {
+    content: ".";
+    line-height: 0;
+    height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+.m_r10 {
+    margin-right: 10px;
+}
+
+.m_l10 {
+    margin-left: 10px;
+}
+
+.m_t10 {
+    margin-top: 10px;
+}
+
+.m_b10 {
+    margin-bottom: 10px;
+}
+
+
+/* 首页公共样式 */
+
+.recommenBan {
+    background-color: #ff9000;
+    height: 36px;
+    padding: 0px 10px;
+    position: relative;
+    span {
+        font: 700 18px/36px '微软雅黑';
+        color: white;
+    }
+    img {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        margin-top: -10px;
+    }
+}
+
+/* 公共头部 */
+#header {
+    height: 50px;
+    background-color: #ff841d;
+    padding: 12px;
+    .logo {
+        height: 100%px;
+        float: left;
+        img {
+            max-height: 25px;
+        }
+    }
+    .app {
+        height: 25px;
+        float: right;
+        img {
+            max-height: 25px;
+        }
+    }
+}
+
+/* 公共搜索框 */
+#search {
+    padding: 10px;
+    display: flex;
+    border-bottom: 1px solid #e6e6e6;
+    background-color: #fff !important;
+    .searchText {
+        height: 30px;
+        flex: 10;
+        border-radius: 50px;
+        border: 0;
+        background-color: #f1f1f1;
+        padding-left: 30px;
+        font-size: 16px;
+        outline: none;
+    }
+    .searchBtn {
+        border-radius: 50px;
+        height: 30px;
+        padding: 0 10px;
+        border: 0;
+        background-color: #ff841d;
+        color: #fff;
+        outline: none;
+        margin-left: -20px;
+    }
+}
+
+/* 公共底部 */
+#footer {
+    background-color: #efefef;
+    ul {
+        display: flex;
+        height: 35px;
+        background: #efefef;
+        margin: 10px 0;
+        li {
+            text-align: center;
+            line-height: 35px;
+            border-top: 1px solid #c4c4c4;
+            border- bottom: 1px solid #c4c4c4;
+        }
+        .login {
+            height: 100%;
+            flex: 4;
+        }
+        .register {
+            height: 100%;
+            flex: 4;
+            border-left: 1px solid #c4c4c4;
+            border-right: 1px solid #c4c4c4;
+        }
+        .backTop {
+            height: 100%;
+            flex: 5;
+            position: relative;
+        }
+    }
+    .bottomText {
+        text-align: center;
+        padding:10px 0;
+        a {
+            color: red;
+        }
+    }
+}

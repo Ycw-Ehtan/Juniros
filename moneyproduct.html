@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!--引入第三方框架UI-->
+	<link rel="stylesheet/less" href="css/base.less">
+	<link rel="stylesheet/less" href="css/moneyproduct.less">
+	<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+	<script type="text/javascript" src="lib/less/less.js"></script>
+</head>
+
+<body>
+	<!-- 国内折扣列表 -->
+	<!--头部-->
+	<header id="header">
+		<a href="http://localhost/MMB(慢慢买)/MobileShopProject/" class="logo">
+			<img src="images/header_logo.png" alt="" />
+		</a>
+		<a href="#" class="app">
+			<img src="images/header_app.png" alt="">
+		</a>
+	</header>
+
+	<!-- 详情页主体部分 -->
+	<main>
+
+	</main>
+
+	<!--底部-->
+	<section id="footer">
+		<ul>
+			<li class="login">
+				<a href="#">登录</a>
+			</li>
+			<li class="register">
+				<a href="#">注册</a>
+			</li>
+			<li class="backTop">
+				<img src="images/top.jpg" height="15" width="15" alt=""> 返回顶部
+			</li>
+		</ul>
+		<div class="bottomText">
+			<a href="#">手机APP下载</a>
+			<span>慢慢买手机版-掌上比价平台</span>
+			<br>
+			<span>m.manmanmai.com</span>
+		</div>
+	</section>
+</body>
+<script src="lib/template.js"></script>
+<script type="text/template" id="mpdTpl">
+	{{each result as value index}}
+	<section class="mpdTit">
+		<h4>{{value.productName}}</h4>
+	</section>
+	<section class="mpdInfo">
+		<div class="pdFrom">{{value.productFrom}}</div>
+		<div class="pdTime">{{value.productTime}}</div>
+		<div class="pdTips">{{value.productTips}}</div>
+	</section>
+	<section class="mpdContent">
+		{{#value.productImgSm}}
+		<p>{{value.productInfo}}</p>
+		<p>{{value.productInfo1}}</p>
+	</section>
+	<section class="bigImgBox">
+		{{#value.productImgLg}}
+	</section>
+	<section class="diqu">
+		{{#value.productCity}}
+	</section>
+	<section class="pdComment">
+		{{#value.productComment}}
+	</section>
+	{{/each}}
+</script>
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="js/moneyproduct.js"></script>
+
+</html>
